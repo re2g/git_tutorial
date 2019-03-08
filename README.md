@@ -18,4 +18,4 @@ A continuación encontrarás una guía básica sobre el uso de Git.
 
 ## USO DE ESTE REPOSITORIO
 
-Dentro de este repositorio encontrará el archivo *tutorial.md* el cual contiene un tutorial acerca de Markdown.
+Dentro de este repositorio encontrará el archivo *tutorial.md* el cual contiene un tutorial acerca de Git.
