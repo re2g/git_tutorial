@@ -54,6 +54,43 @@ Para hacer commit a estos cambios usa ``git commit -m "Mensaje"``. Ahora los arc
 
 Con estos comandos ya estas realizando seguimiento y control de versiones a tu proyecto. 
 
-Para ver los commits realizados en el proyecto puedes utilizar el comando ``git log``
+Para ver los commits realizados en el proyecto puedes utilizar el comando ``git log`` cada commit tendrá un identificador único para llevar el control.
 
 
+## Ramas
+
+Las ramas son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama master es la rama "por defecto". 
+
+Para crear una nueva rama llamada por ejemplo "feature_x" y cámbiate a ella usando ``git checkout -b feature_x`` el *-b* se utliza para crear la rama y pasarse a ella de una vez. Si solo deseas crear la rama, entonces ejecuta ``git branch feature_x``
+
+![Ramas](img/ramas.png)
+
+Para volver a la rama principal o cambiarse a otra rama, utiliza el comando ``git checkout <nombre de la rama>``
+
+Para borrar una rama utliza el comando ``git branch -d feature_x``
+
+
+### Fusionar ramas
+
+Para fusionar otra rama a tu rama activa (por ejemplo master), utiliza ``git merge <nombre de la rama>`` en ambos casos git intentará fusionar automáticamente los cambios. Desafortunadamente, no siempre será posible y se podrán producir conflictos. Tú eres responsable de fusionar esos conflictos manualmente al editar los archivos mostrados por git. 
+
+## Etiquetas
+
+Las etiquetas son recomendadas cuando se tiene una nueva versión publicada de un software. Por ejemplo puedes crear una nueva etiqueta llamada 1.0.0 ejecutando ``git tag 1.0.0 1b2e1d63ff`` *1b2e1d63ff* se refiere a los 10 caracteres del commit id al cual quieres referirte con tu etiqueta. 
+
+Recuerda que puedes obtener el commit id con ``git log``
+
+## Sincronizar repositorio local con un repositorio remoto (github, gitlab, etc)
+
+Para sincronizar un repositorio local con uno remoto, primero crea el repositorio remoto y anota la URI del mismo.
+
+Si tienes un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, usa el comando ``git remote add origin <dirección remota>``
+
+Ahora podrás subir tus cambios al repositorio remoto seleccionado.
+
+### Enviar cambios del repositorio local al remoto
+
+Para enviar los cambios al repositorio remoto ejecuta el comando ``git push origin master``
+
+
+Continuará....
